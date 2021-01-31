@@ -17,7 +17,11 @@ export default (props) => {
       </View>
       <View style={styles.operatorContainer}>
         {props.operators.map((o, i) =>
-          <MyButton key={i} style={styles.operator}>{o}</MyButton>)}
+          <MyButton
+            key={i}
+            style={o !== "=" ? styles.operator : styles.result}>
+            {o}
+          </MyButton>)}
       </View>
     </View>
   );
@@ -48,13 +52,19 @@ const styles = StyleSheet.create({
   },
 
   operator: {
-    backgroundColor: '#87cefa',
+    backgroundColor: '#f7b260',
     width: 80,
-    height: 90,
+    height: 85,
+  }, 
+  
+  result: {
+    backgroundColor: '#e34234',
+    width: 80,
+    height: 100,
   },
 
   clearOperator: {
-    backgroundColor: '#ffe4b5',
+    backgroundColor: '#87cefa',
     width: 220,
     height: 110,
   }
