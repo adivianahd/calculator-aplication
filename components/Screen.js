@@ -5,7 +5,7 @@ import MyText from './MyText';
 export default (props) => {
   return (
     <View style={styles.screen}>
-      <MyText>
+      <MyText style={styles.textScreen}>
         {props.children}
       </MyText>
     </View>
@@ -15,8 +15,11 @@ export default (props) => {
 const styles = StyleSheet.create({
   screen: {
     flex: 1.4,
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: 'column-reverse',
     backgroundColor: '#000',
+  },
+
+  textScreen: {
+    color: '#fff',
   }
 });

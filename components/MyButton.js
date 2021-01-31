@@ -5,21 +5,23 @@ import MyText from './MyText';
 export default (props) => {
   return (
     <TouchableOpacity
-      style={styles.myButton}
+      style={[styles.myButton, props.style]}
       onPress={props.onPress}
     >
-      <MyText>{props.children}</MyText>
+      <MyText style={styles.textButton}>{props.children}</MyText>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   myButton: {
-    width: 85,
-    height: 85,
     borderRadius: 50,
+    margin: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+  },
+
+  textButton: {
+    color: '#000',
   }
 });

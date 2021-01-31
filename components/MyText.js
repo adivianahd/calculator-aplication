@@ -3,7 +3,7 @@ import { Text, StyleSheet } from 'react-native';
 
 export default (props) => {
   return (
-    <Text style={styles.text}>
+    <Text style={[styles.text, props.style]}>
       {props.children}
     </Text>
   );
@@ -11,7 +11,7 @@ export default (props) => {
 
 const styles = StyleSheet.create({
   text: {
-    color: '#f00',
-    fontSize: 50,
+    fontSize: 45,
+    fontWeight: 'bold',
   }
 });
