@@ -6,13 +6,15 @@ export default (props) => {
   return (
     <View style={styles.screen}>
       <View style={styles.numbersContainer}>
-        <MyText style={styles.textScreen}>
+        <MyText style={styles.textScreen1}>
           {props.num1}
         </MyText>
-        <MyText style={styles.textScreen}>
-          {props.num2}
-        </MyText>
-        <MyText style={styles.textScreen}>
+        {props.num2 && 
+          <MyText style={styles.textScreen2}>
+            {props.num2}
+          </MyText>
+        }
+        <MyText style={styles.textScreen1}>
           {props.result}
         </MyText>
       </View>
@@ -28,8 +30,8 @@ export default (props) => {
 const styles = StyleSheet.create({
   screen: {
     flex: 1.4,
+    padding: 25,
     flexDirection: 'row',
-    backgroundColor: '#000',
   },
 
   numbersContainer: {
@@ -37,16 +39,22 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     flexWrap: 'wrap',
     justifyContent: 'flex-end',
-    backgroundColor: "#000",
   },
 
-  textScreen: {
+  textScreen1: {
     color: '#fff',
     fontSize: 70,
   },
 
+  textScreen2: {
+    color: '#fff',
+    fontSize: 70,
+    borderBottomColor: '#87cefa',
+    borderBottomWidth: 2,
+  },
+
   operator: {
-    color: '#f7b260',
+    color: '#87cefa',
     fontSize: 80,
   },
 

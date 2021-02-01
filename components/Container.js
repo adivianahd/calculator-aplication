@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { ImageBackground, StyleSheet, View } from 'react-native';
+import SkyImage from '../assets/s10_sky.jpg';
 import Screen from './Screen';
 import Keyboard from './Keyboard';
 
@@ -15,22 +16,24 @@ export default () => {
 
   return (
     <View style={styles.container}>
-      <Screen
-        num1={num1}
-        num2={num2}
-        op={op}
-        result={result} />
-      <Keyboard
-        numbers={num}
-        operators={operators}
-        num1={num1}
-        num2={num2}
-        op={op}
-        result={result}
-        setNum1={setNum1}
-        setNum2={setNum2}
-        setOp={setOp}
-        setResult={setResult} />
+      <ImageBackground source={SkyImage} style={styles.image}>
+        <Screen
+          num1={num1}
+          num2={num2}
+          op={op}
+          result={result} />
+        <Keyboard
+          numbers={num}
+          operators={operators}
+          num1={num1}
+          num2={num2}
+          op={op}
+          result={result}
+          setNum1={setNum1}
+          setNum2={setNum2}
+          setOp={setOp}
+          setResult={setResult} />
+      </ImageBackground>
     </View>
   );
 };
@@ -38,6 +41,12 @@ export default () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ccc',
-  }
+    backgroundColor: '#000',
+  },
+
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center"
+  },
 });

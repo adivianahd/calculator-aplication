@@ -83,7 +83,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 2,
     flexDirection: 'row',
-    backgroundColor: '#000',
   },
 
   numberContainer: {
@@ -100,19 +99,19 @@ const styles = StyleSheet.create({
   number: {
     backgroundColor: '#f0f8ff',
     width: 110,
-    height: 110,
+    height: 105,
   },
 
   operator: {
-    backgroundColor: '#f7b260',
+    backgroundColor: '#E4B2BB',
     width: 80,
-    height: 85,
+    height: 83,
   },
 
   result: {
-    backgroundColor: '#e34234',
+    backgroundColor: '#87cefa',
     width: 80,
-    height: 100,
+    height: 90,
   },
 
   clearOperator: {
