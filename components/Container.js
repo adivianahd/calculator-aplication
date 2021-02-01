@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Screen from './Screen';
 import Keyboard from './Keyboard';
 
-const num = ["9","8","7","6","5","4","3","2","1","C","0"];
-const op = ["+","-","*","/","="];
+const num = ["7", "8", "9", "4", "5", "6", "1", "2", "3", "C", "0"];
+const operators = ["+", "-", "*", "/", "="];
 
+export default () => {
 
-export default (props) => {
+  const [num1, setNum1] = useState(null);
+  const [num2, setNum2] = useState(null);
+  const [op, setOp] = useState(null);
+  const [result, setResult] = useState(null);
+
   return (
     <View style={styles.container}>
-      <Screen/>
-      <Keyboard numbers={num} operators={op}/>
+      <Screen
+        num1={num1}
+        num2={num2}
+        op={op}
+        result={result} />
+      <Keyboard
+        numbers={num}
+        operators={operators}
+        num1={num1}
+        num2={num2}
+        op={op}
+        result={result}
+        setNum1={setNum1}
+        setNum2={setNum2}
+        setOp={setOp}
+        setResult={setResult} />
     </View>
   );
 };
