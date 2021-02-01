@@ -24,10 +24,14 @@ export default ({
   }
 
   const onChange = (e) => {
-    if (!!result){ 
+    const hasResult = !!result;
+    const isANumber = e !== '+' && e !== '-' && e !== '/' && e !== '*' && e !== '=' && e !== 'C';
+    
+    if (hasResult){ 
      return reset()
     }
-    if (e !== '+' && e !== '-' && e !== '/' && e !== '*' && e !== '=' && e !== 'C') {
+
+    if (isANumber) {
       if (!num1) { setNum1(e) }
       if (num1 && !op) { setNum1(num1 + e) }
       if (num1 && op) { setNum2(e) }
