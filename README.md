@@ -4,11 +4,14 @@ This is a sample calculator app built with React Native for sole purposes of lea
 
 <img src="./assets/showCalculator.jpeg" alt="Show calculator"/>
 
-You can run this in expo!
+- Apk Android:
 
 
 <img src="./assets/tryMe.png" alt="run this qr code"/>
 
-link:
+- You can run this in expo!
 
-<a href="https://exp.host/@adivianahd/calculator-app">Link here to run expo!</a>
+<img src="./assets/tryMe.png" alt="run this qr code"/>
+
+
+<a href="https://exp.host/@adivianahd/calculator-app">Link to run expo!</a>
