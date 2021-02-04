@@ -8,3 +8,7 @@ You can run this!
 
 
 <img src="./assets/tryMe.png" alt="run this qr code"/>
+
+link:
+
+<a href="https://exp.host/@adivianahd/calculator-app">Link here!</a>
