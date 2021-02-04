@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/iconCalc.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.adivianahd.calculatorapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
