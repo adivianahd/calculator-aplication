@@ -7,7 +7,7 @@ This is a sample calculator app built with React Native for sole purposes of lea
 - Apk Android:
 
 
-<img src="./assets/tryMe.png" alt="run this qr code"/>
+<img src="./assets/apkAndroid.png" alt="run this qr code"/>
 
 - You can run this in expo!
 
